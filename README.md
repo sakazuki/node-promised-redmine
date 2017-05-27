@@ -26,6 +26,7 @@ Main methods
   - **(get|set)BasicAuth(auth)** string used as *auth* option of the http request
   - **(get|set)Protocol(protocol)** http or https
   - **(get|set)PathPrefix(prefix)** path prefix to prepend to each request paths
+  - **(get|set)RejectUnauthorized(boolean)** reject to access SSL sites without certs. default true
   - **(get|set)SslCaCert(certFilePath)** path or array of path to authority certificates files to check the remote host against
   - **(get|set)SslClientCert(certFilePath)** path to public x509 certificate file to use
   - **setSslClientKey(keyFilePath, passPhrase)*** path to client private key file to use for SSL and associated passphrase
@@ -80,8 +81,9 @@ var config = {
   host: "localhost", // required
   apiKey: "XXXXXX", // required
   pathPrefix: "/myRedminePath",
-  protocol: "http",
+  protocol: "https",
   // if using SSL settings, change protocol and port accordingly
+  rejectUnauthorized: false, //defaults to false
   sslCaCert: '/path/to/root/ca.pem', // defaults to null
   sslClientCert: '/path/to/client/cert.pem', // defaults to null
   sslClientKey: '/path/to/client/cert.key', // defaults to null

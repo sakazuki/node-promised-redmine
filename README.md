@@ -51,6 +51,10 @@ Main methods
   - **postIssue(issue, params)** create a new issue
   - **updateIssue(id, issue, params)** update issue with given id
   - **deleteIssue(id, params)** delete an issue by its id
+  - **uploads(attachments)** upload attach files
+  - **upload(attachment)** upload an attach file
+  - **getIssueStatuses** return list of issue statuses
+
 - **Users**
   - **getUsers(params)** return list of users (max 100)
   - **getUser(id, params)** retrieve user details by its id
